@@ -9,10 +9,11 @@ public class StrafeControls : MonoBehaviour {
 	
 	void Update () {
 		float input = Input.GetAxisRaw("Horizontal");
+		if (input == 0)
+			return;
 		float move = input * speed * Time.deltaTime;
 		Vector3 newPosition = transform.position + new Vector3(move, 0, 0);
-		if (Mathf.Abs(transform.position.x) > maxDistance)
-			newPosition.x = Mathf.Clamp(newPosition.x, -maxDistance, maxDistance);
+		newPosition.x = Mathf.Clamp(newPosition.x, -maxDistance, maxDistance);
 		transform.position = newPosition;
 	}
 }
