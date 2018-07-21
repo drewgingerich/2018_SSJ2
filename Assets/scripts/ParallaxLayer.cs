@@ -7,12 +7,10 @@ public class ParallaxLayer : MonoBehaviour {
 	[SerializeField] Transform movementReference;
 	[SerializeField] Transform farReference;
 
-	float origin;
 	float movementOrigin;
 	float movementRatio;
 
 	void Start() {
-		origin = transform.position.x;
 		movementOrigin = movementReference.position.x;
 		float referenceDepth = farReference.position.z - movementReference.position.z;
 		float depth = movementReference.position.z - transform.position.z;
