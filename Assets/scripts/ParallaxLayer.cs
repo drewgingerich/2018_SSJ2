@@ -13,7 +13,7 @@ public class ParallaxLayer : MonoBehaviour {
 	void Start() {
 		movementOrigin = movementReference.position.x;
 		float referenceDepth = farReference.position.z - movementReference.position.z;
-		float depth = movementReference.position.z - transform.position.z;
+		float depth = farReference.position.z - transform.position.z;
 		movementRatio = depth / referenceDepth;
 	}
 
@@ -21,5 +21,6 @@ public class ParallaxLayer : MonoBehaviour {
 		float movement = movementReference.position.x - movementOrigin;
 		Vector3 position = transform.position;
 		position.x = movement * movementRatio;
+		transform.position = position;
 	}
 }
