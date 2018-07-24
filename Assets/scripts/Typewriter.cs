@@ -7,9 +7,6 @@ using UnityEngine.UI;
 public class Typewriter : MonoBehaviour {
 
 	[SerializeField] Text textBox;
-	[SerializeField] float charTime = 0.05f;
-	[SerializeField] float nameTime = 0.2f;
-	[SerializeField] float lineTime = 1.5f;
 	[SerializeField] List<DialogueLine> lines;
 
 	const string hideTags = "<color=#000000ff></color>";
@@ -33,7 +30,7 @@ public class Typewriter : MonoBehaviour {
 	IEnumerator RunDialogue() {
 		foreach (DialogueLine line in lines) {
 			yield return StartCoroutine(TypeText(line));
-			yield return new WaitForSeconds(lineTime);
+			yield return new WaitForSeconds(line.finishPauseTime);
 		}
 	}
 
@@ -54,7 +51,7 @@ public class Typewriter : MonoBehaviour {
 			lineIndex++;
 			if (lineIndex == line.text.Length)
 				break;
-			yield return new WaitForSeconds(charTime);
+			yield return new WaitForSeconds(line.textSpeed);
 		}
 	}
 }

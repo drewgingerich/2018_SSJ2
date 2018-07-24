@@ -14,3 +14,5 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: 05da0b3bf69b44decb16f91252cc9952, type: 2}
   text: No, she went insane and she's been out for blood every since. If you enter
     the house, she'll hunt you down.
+  textSpeed: 0.03
+  finishPauseTime: 1.5

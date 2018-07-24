@@ -13,3 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: 05da0b3bf69b44decb16f91252cc9952, type: 2}
   text: My friend told me he killed her for the insurance money.
+  textSpeed: 0.03
+  finishPauseTime: 1.5

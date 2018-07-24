@@ -14,3 +14,5 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: 05da0b3bf69b44decb16f91252cc9952, type: 2}
   text: Anyways the neighbors figured it out and told the police. They put him in
     jail for life.
+  textSpeed: 0.03
+  finishPauseTime: 1.5

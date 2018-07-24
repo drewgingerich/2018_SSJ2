@@ -13,3 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: 7f130f7dd0e164125855ea22a6c90755, type: 2}
   text: Whatever. I mean, do you even know someone who's disappeared?
+  textSpeed: 0.03
+  finishPauseTime: 1.5
