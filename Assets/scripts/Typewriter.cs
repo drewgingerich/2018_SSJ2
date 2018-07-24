@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class Typewriter : MonoBehaviour {
+
+	public UnityEvent OnFinish;
 
 	[SerializeField] Text textBox;
 	[SerializeField] List<DialogueLine> lines;
@@ -32,6 +35,7 @@ public class Typewriter : MonoBehaviour {
 			yield return StartCoroutine(TypeText(line));
 			yield return new WaitForSeconds(line.finishPauseTime);
 		}
+		OnFinish.Invoke();
 	}
 
 	IEnumerator TypeText(DialogueLine line) {

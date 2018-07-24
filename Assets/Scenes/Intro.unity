@@ -184,6 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 471000612}
   - component: {fileID: 471000611}
+  - component: {fileID: 471000613}
   m_Layer: 5
   m_Name: TypeWriter
   m_TagString: Untagged
@@ -202,10 +203,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74dfd1a06edc847b6a719842ae567f86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnFinish:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 471000613}
+        m_MethodName: ChangeScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   textBox: {fileID: 860931129}
-  charTime: 0.05
-  nameTime: 0.2
-  lineTime: 0.5
   lines:
   - {fileID: 11400000, guid: 023af8bc7ebff4a9387782fb4a692bc3, type: 2}
   - {fileID: 11400000, guid: 9fc913a40c79144a2ba703928a121ea6, type: 2}
@@ -240,6 +254,18 @@ RectTransform:
   m_AnchoredPosition: {x: 931.5, y: 524}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &471000613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 471000610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0abfdbfe0f2184f94bc7ae1eecd70086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Attic
 --- !u!1 &860931127
 GameObject:
   m_ObjectHideFlags: 0
