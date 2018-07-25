@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: 15 John
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: 05da0b3bf69b44decb16f91252cc9952, type: 2}
-  text: Fine. We're gonna find out soon anyways.
+  text: Your choice. But I bet you can't stay there over night.
   textSpeed: 0.03
-  finishPauseTime: 1.5
+  finishPauseTime: 2

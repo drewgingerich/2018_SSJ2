@@ -14,4 +14,4 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: 7f130f7dd0e164125855ea22a6c90755, type: 2}
   text: It's not exactly a happy ending, but-
   textSpeed: 0.03
-  finishPauseTime: 0.5
+  finishPauseTime: 0.2

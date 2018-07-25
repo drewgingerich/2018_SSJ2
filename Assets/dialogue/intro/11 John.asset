@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: 11 John
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: 05da0b3bf69b44decb16f91252cc9952, type: 2}
-  text: And why do you think that is? They can't sell it. People have disappeared
-    there without a trace. How have you not heard this?
+  text: Why do you think that is? They can't sell it. People have disappeared there
+    without a trace. How have you not heard this?
   textSpeed: 0.03
-  finishPauseTime: 1.5
+  finishPauseTime: 1
