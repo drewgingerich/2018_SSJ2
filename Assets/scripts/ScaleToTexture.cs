@@ -6,8 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(MeshRenderer))]
 public class ScaleToTexture : MonoBehaviour {
 
-	[SerializeField] Material textureMaterial;
 	[SerializeField] int pixPerUnit = 900;
+
 	new MeshRenderer renderer;
 	
 	void Awake() {
