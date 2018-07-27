@@ -11,4 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 217cd4dd5985d408b83f2443d4a54f09, type: 3}
   m_Name: outro
   m_EditorClassIdentifier: 
-  lines: []
+  lines:
+  - {fileID: 11400000, guid: 25df9aacfa04c4a32b7754d0526c1d94, type: 2}
+  - {fileID: 11400000, guid: d9a73cc5c924743ddae4859a2172f991, type: 2}
+  - {fileID: 11400000, guid: c6eb9f87552dd4eb68d3a9398421b95a, type: 2}
+  - {fileID: 11400000, guid: fb6cb1738541b4398ba70f72a582b6da, type: 2}
+  - {fileID: 11400000, guid: a80f702423e1548009e6a8e611d715c6, type: 2}
