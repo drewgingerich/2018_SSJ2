@@ -6,8 +6,8 @@ using UnityEngine.Events;
 public class FindableGroup : MonoBehaviour {
 
 	public UnityEvent OnFinish;
+
 	[SerializeField] List<Findable> items;
-	[SerializeField] [TextArea] string thought;
 
 	List<Findable> found;
 
@@ -15,12 +15,7 @@ public class FindableGroup : MonoBehaviour {
 		found = new List<Findable>();
 	}
 
-	public void ActivateGroup() {
-		StartCoroutine(ActivationRoutine());
-	}
-
-	IEnumerator ActivationRoutine() {
-		yield return StartCoroutine(ThoughtDisplay.instance.DisplayText(thought));
+	public void Activate() {
 		foreach (Findable findable in items) {
 			findable.Activate(FindItem);
 		}
