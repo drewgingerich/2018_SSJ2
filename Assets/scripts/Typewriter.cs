@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Events;
 
 public class Typewriter : MonoBehaviour {
 
-	public UnityEvent OnFinish;
+	public System.Action OnFinish = delegate {};
 
 	[SerializeField] Text textBox;
 	[SerializeField] List<DialogueLine> lines;
 
-	const string hideTags = "<color=#000000ff></color>";
+	const string hideTags = "<color=#00000000></color>";
 	int hideTagLength;
 	int closingTagLength;
 
@@ -26,19 +25,21 @@ public class Typewriter : MonoBehaviour {
 		sb.Append(hideTags);
 	}
 
-	void Start() {
-		StartCoroutine(RunDialogue());
+	public void TypeDialogue(Dialogue dialogue) {
+		gameObject.SetActive(true);
+		StartCoroutine(TypeDialogueRoutine(dialogue));
 	}
 
-	IEnumerator RunDialogue() {
-		foreach (DialogueLine line in lines) {
-			yield return StartCoroutine(TypeText(line));
+	IEnumerator TypeDialogueRoutine(Dialogue dialogue) {
+		foreach (DialogueLine line in dialogue.Lines) {
+			yield return StartCoroutine(TypeTextRoutine(line));
 			yield return new WaitForSeconds(line.finishPauseTime);
 		}
-		OnFinish.Invoke();
+		OnFinish();
+		gameObject.SetActive(false);
 	}
 
-	IEnumerator TypeText(DialogueLine line) {
+	IEnumerator TypeTextRoutine(DialogueLine line) {
 		string colorhex = ColorUtility.ToHtmlStringRGB(line.character.color);
 		sb.Insert(sb.Length - hideTagLength, '\n');
 		sb.Insert(sb.Length - hideTagLength, '\n');
