@@ -21,8 +21,6 @@ public class Typewriter : MonoBehaviour {
 	void Awake() {
 		hideTagLength = hideTags.Length;
 		closingTagLength = "</color>".Length;
-		sb = new StringBuilder();
-		sb.Append(hideTags);
 	}
 
 	public void TypeDialogue(Dialogue dialogue) {
@@ -31,6 +29,8 @@ public class Typewriter : MonoBehaviour {
 	}
 
 	IEnumerator TypeDialogueRoutine(Dialogue dialogue) {
+		sb = new StringBuilder();
+		sb.Append(hideTags);
 		foreach (DialogueLine line in dialogue.Lines) {
 			yield return StartCoroutine(TypeTextRoutine(line));
 			yield return new WaitForSeconds(line.finishPauseTime);
