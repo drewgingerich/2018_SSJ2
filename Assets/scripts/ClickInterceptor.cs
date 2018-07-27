@@ -4,7 +4,9 @@ using UnityEngine;
 
 public abstract class ClickInterceptor : MonoBehaviour {
 
-	public abstract bool CheckForIntercept(RaycastHit hit);
+	public virtual bool CheckForIntercept(RaycastHit hit) {
+		return true;
+	}
 
 	public virtual void Intercept() {
 		return;

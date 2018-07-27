@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class ItemDisplay : MonoBehaviour {
 
+	public System.Action OnFinish = delegate {};
+
 	[SerializeField] DialogueCharacter character;
 	[SerializeField] RawImage picture;
 	[SerializeField] Text text;
@@ -19,8 +21,6 @@ public class ItemDisplay : MonoBehaviour {
 	}
 
 	IEnumerator DisplayText(Item item) {
-		yield return null;
-
 		StringBuilder sb = new StringBuilder();
 		string charColor = ColorUtility.ToHtmlStringRGB(character.color);
 		sb.AppendFormat("<i><color=#{0}></color><color=#000000ff>{1}</color></i>", charColor, item.description);
@@ -56,6 +56,7 @@ public class ItemDisplay : MonoBehaviour {
 			yield return null;
 		}
 
+		OnFinish();
 		gameObject.SetActive(false);
 	}
 

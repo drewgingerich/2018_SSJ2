@@ -17,7 +17,8 @@ public class FindableGroup : MonoBehaviour {
 
 	public void Activate() {
 		foreach (Findable findable in items) {
-			findable.Activate(FindItem);
+			findable.OnFind.AddListener(FindItem);
+			findable.Activate();
 		}
 	}
 

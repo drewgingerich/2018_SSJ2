@@ -6,26 +6,28 @@ using UnityEngine.Events;
 [RequireComponent(typeof(MeshCollider))]
 public class Findable : ClickInterceptor {
 
-	public UnityEvent OnFind;
-	System.Action<Findable> onFind;
+	public UnityEvent OnIntercept;
+	public UnityEvent<Findable> OnFind;
 
+	[SerializeField] ItemDisplay itemDisplay;
+	[SerializeField] Item item;
 	[SerializeField] bool active = false;
 
-	public override bool CheckForIntercept(RaycastHit hit) {
-		return true;
+	public void Activate() {
+		gameObject.SetActive(true);
+		active = true;
 	}
 
 	public override void Intercept() {
 		if (!active)
 			return;
-		OnFind.Invoke();
-		if (onFind != null)
-			onFind(this);
+		OnIntercept.Invoke();
+		itemDisplay.OnFinish += Find;
+		itemDisplay.DisplayItem(item);
 	}
 
-	public void Activate(System.Action<Findable> onFind) {
-		this.onFind = onFind;
-		gameObject.SetActive(true);
-		active = true;
+	void Find() {
+		itemDisplay.OnFinish -= Find;
+		OnFind.Invoke(this);
 	}
 }
