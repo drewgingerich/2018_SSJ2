@@ -17,6 +17,6 @@ public class ScaleToTexture : MonoBehaviour {
 	void Update() {
 		Texture texture = renderer.sharedMaterial.mainTexture;
 		Vector2 size = new Vector2(texture.width, texture.height) / pixPerUnit;
-		transform.localScale = (Vector3)size;
+		transform.localScale = new Vector3(size.x, size.y, 1);
 	}
 }
