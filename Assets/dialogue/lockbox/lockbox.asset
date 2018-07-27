@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 217cd4dd5985d408b83f2443d4a54f09, type: 3}
+  m_Name: lockbox
+  m_EditorClassIdentifier: 
+  lines:
+  - {fileID: 11400000, guid: c8c02b7d857934a47949566b2c149ea3, type: 2}
+  - {fileID: 11400000, guid: 678836b6953054a90ab4329071a4ed7d, type: 2}
+  - {fileID: 11400000, guid: aa0ab68b07e5c441b92671d08b95f628, type: 2}
+  - {fileID: 11400000, guid: b2c757ab368434fc2b120253bbe880bc, type: 2}
