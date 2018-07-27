@@ -24,6 +24,7 @@ public class Typewriter : MonoBehaviour {
 	}
 
 	public void TypeDialogue(Dialogue dialogue) {
+		StopAllCoroutines();
 		gameObject.SetActive(true);
 		StartCoroutine(TypeDialogueRoutine(dialogue));
 	}
@@ -36,6 +37,7 @@ public class Typewriter : MonoBehaviour {
 			yield return new WaitForSeconds(line.finishPauseTime);
 		}
 		OnFinish();
+		yield return null;
 		gameObject.SetActive(false);
 	}
 
