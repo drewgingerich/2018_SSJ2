@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(MeshRenderer))]
-[RequireComponent(typeof(MeshCollider))]
 public class RaycastAlphaMask : ClickInterceptor {
 
 	[SerializeField] float threshold = 0.01f;

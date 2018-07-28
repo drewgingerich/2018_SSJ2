@@ -23,7 +23,7 @@ public class ClickControls : MonoBehaviour {
 	void Hover() {
 		ClickInterceptor interceptor = FindInteceptor();
 		if (interceptor != null)
-			if (interceptor.GetComponent<Findable>() != null) {
+			if (interceptor.GetComponent<Interactable>() != null) {
 				// glow sparks
 			}
 	}
@@ -31,7 +31,6 @@ public class ClickControls : MonoBehaviour {
 	ClickInterceptor FindInteceptor() {
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 		int hits = Physics.RaycastNonAlloc(ray, hitBuffer);
-		Debug.Log(hits);
 
 		ClickInterceptor activeInterceptor = null;
 
@@ -44,7 +43,6 @@ public class ClickControls : MonoBehaviour {
 				activeInterceptor = interceptor;
 		}
 
-		Debug.Log(activeInterceptor);
 		return activeInterceptor;
 	}
 }
