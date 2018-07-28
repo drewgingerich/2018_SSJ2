@@ -14,6 +14,7 @@ public class ItemDisplay : MonoBehaviour {
 	System.Action callback;
 
 	public void DisplayItem(Item item, System.Action callback) {
+		StopAllCoroutines();
 		this.callback = callback;
 		gameObject.SetActive(true);
 		picture.texture = item.picture;
@@ -26,6 +27,7 @@ public class ItemDisplay : MonoBehaviour {
 		yield return null;
 		yield return StartCoroutine(DisplayItemTextRoutine(item.text, sb));
 		callback();
+		yield return null;
 		gameObject.SetActive(false);
 	}
 
