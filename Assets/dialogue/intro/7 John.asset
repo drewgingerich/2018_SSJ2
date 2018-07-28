@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: 7 John
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: 05da0b3bf69b44decb16f91252cc9952, type: 2}
-  text: But the worst part is that she survived.
+  text: They put him in jail for life.
   textSpeed: 0.03
   finishPauseTime: 1

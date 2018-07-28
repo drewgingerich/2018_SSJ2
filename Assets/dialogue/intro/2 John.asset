@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: 2 John
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: 05da0b3bf69b44decb16f91252cc9952, type: 2}
-  text: He fed her into a combine, and it chopped her into peices.
+  text: He fed her into a combine, and it chopped her into pieces.
   textSpeed: 0.03
   finishPauseTime: 1

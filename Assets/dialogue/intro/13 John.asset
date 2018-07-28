@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Name: 13 John
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: 05da0b3bf69b44decb16f91252cc9952, type: 2}
-  text: Donny Depot, five years ago. If you ask any old-timer they just beat around
-    the bush, tell you not to go there.
+  text: I heard she kills anyone who spends the night at the abandoned house.
   textSpeed: 0.03
   finishPauseTime: 1

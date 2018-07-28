@@ -9,10 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9ba1cda2127f493392ce3827487e55a, type: 3}
-  m_Name: 11 John
+  m_Name: 12 John
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: 05da0b3bf69b44decb16f91252cc9952, type: 2}
-  text: Why do you think that is? They can't sell it. People have disappeared there
-    without a trace. How have you not heard this?
+  text: No! She went insane!
   textSpeed: 0.03
   finishPauseTime: 1
