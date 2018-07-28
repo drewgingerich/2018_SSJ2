@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(MeshCollider))]
 public abstract class ClickInterceptor : MonoBehaviour {
 
 	public virtual bool CheckForIntercept(RaycastHit hit) {

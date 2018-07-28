@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu]
+[CreateAssetMenu(menuName = "Item/Item")]
 public class Item : ScriptableObject {
 
 	public Texture2D picture;
