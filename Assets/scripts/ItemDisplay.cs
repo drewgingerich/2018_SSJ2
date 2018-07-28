@@ -22,9 +22,9 @@ public class ItemDisplay : MonoBehaviour {
 
 	IEnumerator DisplayItemRoutine(Item item) {
 		StringBuilder sb = new StringBuilder();
-		DisplayItemDescriptionRoutine(item.description, sb);
+		yield return StartCoroutine(DisplayItemDescriptionRoutine(item.description, sb));
 		yield return null;
-		DisplayItemTextRoutine(item.text, sb);
+		yield return StartCoroutine(DisplayItemTextRoutine(item.text, sb));
 		callback();
 		gameObject.SetActive(false);
 	}

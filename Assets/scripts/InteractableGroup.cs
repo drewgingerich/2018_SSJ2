@@ -10,9 +10,8 @@ public class InteractableGroup : MonoBehaviour {
 	[SerializeField] List<Interactable> interactables;
 
 	public void Activate() {
-		foreach (InteractiveItem interactable in interactables) {
+		foreach (Interactable interactable in interactables) {
 			interactable.OnFinishInteracting.AddListener(FindItem);
-			Debug.Log(interactable.OnFinishInteracting);
 			interactable.Activate();
 		}
 	}
