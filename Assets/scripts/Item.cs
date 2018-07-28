@@ -6,6 +6,6 @@ using UnityEngine;
 public class Item : ScriptableObject {
 
 	public Texture2D picture;
-	[TextArea] public string description;
-	[TextArea] public string text;
+	[TextArea(5, 10)] public string description;
+	[TextArea(10, 15)] public string text;
 }
