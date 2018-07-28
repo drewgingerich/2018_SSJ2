@@ -13,4 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   picture: {fileID: 2800000, guid: 032ab4f60cf0e4d059a602e3724eb17b, type: 3}
   description: Test
-  text: Test
+  text: "Mr. Boyer,\n\nIt has come to my attention that you have something of a financial
+    problem. Now, I've been working hard and doing well for myself, and I'd like to
+    offer you a hand. I will buy your land and home for $25,000. \n\nLet me know soon
+    and I\u2019ll have my lawyer take us through the sale.\n\nYour neighbor,\n\nMr.
+    Standshir\n"

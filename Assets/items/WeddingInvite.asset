@@ -13,4 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   picture: {fileID: 2800000, guid: da84f780a880d4ce0aed59aeb81a3f03, type: 3}
   description: Test
-  text: Test
+  text: "Dear Nancy,\n\nThis is wonderful news! You are kind and beautiful and you
+    deserve someone that makes you happy. But I must wonder, how on Earth did you
+    meet them? You're a small town girl, and they, well, they're big city folk with
+    a healthy bank account\u2026 Do they have siblings? And they're a looker and a
+    kind soul to boot. I'm impressed. I look forward to the wedding!\n\nYours truly,
+    \n\nClaire\n"

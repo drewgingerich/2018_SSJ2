@@ -13,4 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   picture: {fileID: 2800000, guid: 05fc1f1c813fb49118c716577f2176e2, type: 3}
   description: Test
-  text: Test
+  text: 
