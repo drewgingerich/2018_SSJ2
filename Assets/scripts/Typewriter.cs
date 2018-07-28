@@ -10,6 +10,7 @@ public class Typewriter : MonoBehaviour {
 
 	[SerializeField] Text textBox;
 	[SerializeField] List<DialogueLine> lines;
+	[SerializeField] bool clearLines = false;
 
 	const string hideTags = "<color=#00000000></color>";
 	int hideTagLength;
@@ -30,10 +31,15 @@ public class Typewriter : MonoBehaviour {
 	}
 
 	IEnumerator TypeDialogueRoutine(Dialogue dialogue) {
-		sb = new StringBuilder();
-		sb.Append(hideTags);
+		PrepareStringBuilder();
 		foreach (DialogueLine line in dialogue.Lines) {
 			yield return StartCoroutine(TypeTextRoutine(line));
+			if (clearLines) {
+				PrepareStringBuilder();
+			} else {
+				sb.Insert(sb.Length - hideTagLength, '\n');
+				sb.Insert(sb.Length - hideTagLength, '\n');
+			}
 			yield return new WaitForSeconds(line.finishPauseTime);
 		}
 		OnFinish();
@@ -41,10 +47,14 @@ public class Typewriter : MonoBehaviour {
 		gameObject.SetActive(false);
 	}
 
+	void PrepareStringBuilder() {
+		sb = new StringBuilder();
+		sb.Append(hideTags);
+	}
+
 	IEnumerator TypeTextRoutine(DialogueLine line) {
 		string colorhex = ColorUtility.ToHtmlStringRGB(line.character.color);
-		sb.Insert(sb.Length - hideTagLength, '\n');
-		sb.Insert(sb.Length - hideTagLength, '\n');
+
 		sb.Insert(sb.Length - hideTagLength, string.Format("<color=#{0}></color>", colorhex));
 		sb.Insert(sb.Length - closingTagLength, line.text);
 		int lineIndex = 0;
