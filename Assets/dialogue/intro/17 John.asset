@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: 17 John
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: 05da0b3bf69b44decb16f91252cc9952, type: 2}
-  text: Well, I bet you can't to spend the night there...
+  text: Well, I bet you can't spend the night there...
   textSpeed: 0.03
   finishPauseTime: 1
