@@ -6,58 +6,58 @@ using UnityEngine.UI;
 
 public class ItemDisplay : MonoBehaviour {
 
-	public System.Action OnFinish = delegate {};
-
 	[SerializeField] DialogueCharacter character;
 	[SerializeField] RawImage picture;
-	[SerializeField] Text text;
+	[SerializeField] Text textBox;
 	[SerializeField] float textSpeed = 0.03f;
-	[SerializeField] float thoughtPauseTime = 1.5f;
 
-	public void DisplayItem(Item item) {
+	System.Action callback;
+
+	public void DisplayItem(Item item, System.Action callback) {
+		this.callback = callback;
 		gameObject.SetActive(true);
 		picture.texture = item.picture;
-		StartCoroutine(DisplayText(item));
+		StartCoroutine(DisplayItemRoutine(item));
 	}
 
-	IEnumerator DisplayText(Item item) {
+	IEnumerator DisplayItemRoutine(Item item) {
 		StringBuilder sb = new StringBuilder();
+		DisplayItemDescriptionRoutine(item.description, sb);
+		yield return null;
+		DisplayItemTextRoutine(item.text, sb);
+		callback();
+		gameObject.SetActive(false);
+	}
+
+	IEnumerator DisplayItemDescriptionRoutine(string description, StringBuilder sb) {
 		string charColor = ColorUtility.ToHtmlStringRGB(character.color);
-		sb.AppendFormat("<i><color=#{0}></color><color=#000000ff>{1}</color></i>", charColor, item.description);
+		sb.AppendFormat("<i><color=#{0}></color><color=#000000ff>{1}</color></i>", charColor, description);
 
 		int endTagLength = "</color></i>".Length;
 		int visibleTextOffset = "</color><color=#000000ff>".Length;
 
-		for (int i = 0; i < item.description.Length; i++) {
-			int currentIndex = sb.Length - endTagLength - item.description.Length + i;
+		for (int i = 0; i < description.Length; i++) {
+			int currentIndex = sb.Length - endTagLength - description.Length + i;
 			sb.Remove(currentIndex, 1);
-			sb.Insert(currentIndex - visibleTextOffset, item.description[i]);
-			text.text = sb.ToString();
+			sb.Insert(currentIndex - visibleTextOffset, description[i]);
+			textBox.text = sb.ToString();
 			yield return new WaitForSeconds(textSpeed);
 		}
 
 		while (!CheckForInterrupt()) {
 			yield return null;
 		}
-		yield return null;
+	}
 
-		// float timer = 0;
-		// while (!CheckForInterrupt() && timer < thoughtPauseTime) {
-		// 	timer += Time.deltaTime;
-		// 	yield return null;
-		// }
-
+	IEnumerator DisplayItemTextRoutine(string text, StringBuilder sb) {
 		sb.Append('\n');
 		sb.Append('\n');
-		sb.Append(item.text);
-		text.text = sb.ToString();
+		sb.Append(text);
+		textBox.text = sb.ToString();
 
 		while (!CheckForInterrupt()) {
 			yield return null;
 		}
-
-		OnFinish();
-		gameObject.SetActive(false);
 	}
 
 	bool CheckForInterrupt() {
