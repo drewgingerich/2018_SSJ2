@@ -3,30 +3,33 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class ItemDisplay : MonoBehaviour {
+
+	public UnityEvent OnStart;
+	public UnityEvent OnEnd;
 
 	[SerializeField] DialogueCharacter character;
 	[SerializeField] RawImage picture;
 	[SerializeField] Text textBox;
 	[SerializeField] float textSpeed = 0.03f;
 
-	System.Action callback;
-
 	public void DisplayItem(Item item, System.Action callback) {
 		StopAllCoroutines();
-		this.callback = callback;
 		gameObject.SetActive(true);
 		picture.texture = item.picture;
-		StartCoroutine(DisplayItemRoutine(item));
+		StartCoroutine(DisplayItemRoutine(item, callback));
 	}
 
-	IEnumerator DisplayItemRoutine(Item item) {
+	IEnumerator DisplayItemRoutine(Item item, System.Action callback) {
+		OnStart.Invoke();
 		StringBuilder sb = new StringBuilder();
 		yield return StartCoroutine(DisplayItemDescriptionRoutine(item.description, sb));
 		yield return null;
 		yield return StartCoroutine(DisplayItemTextRoutine(item.text, sb));
 		callback();
+		OnEnd.Invoke();
 		yield return null;
 		gameObject.SetActive(false);
 	}

@@ -11,12 +11,10 @@ public class DialoguePlayer : MonoBehaviour {
 	[SerializeField] Dialogue dialogue;
 
 	public void Activate() {
-		typewriter.OnFinish += Finish;
-		typewriter.TypeDialogue(dialogue);
+		typewriter.TypeDialogue(dialogue, Finish);
 	}
 
 	void Finish() {
-		typewriter.OnFinish -= Finish;
 		OnFinish.Invoke();
 	}
 }

@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class Typewriter : MonoBehaviour {
 
-	public System.Action OnFinish = delegate {};
+	public UnityEvent OnStart;
+	public UnityEvent OnEnd;
 
 	[SerializeField] Text textBox;
 	[SerializeField] List<DialogueLine> lines;
@@ -24,13 +26,14 @@ public class Typewriter : MonoBehaviour {
 		closingTagLength = "</color>".Length;
 	}
 
-	public void TypeDialogue(Dialogue dialogue) {
+	public void TypeDialogue(Dialogue dialogue, System.Action callback) {
 		StopAllCoroutines();
 		gameObject.SetActive(true);
-		StartCoroutine(TypeDialogueRoutine(dialogue));
+		StartCoroutine(TypeDialogueRoutine(dialogue, callback));
 	}
 
-	IEnumerator TypeDialogueRoutine(Dialogue dialogue) {
+	IEnumerator TypeDialogueRoutine(Dialogue dialogue, System.Action callback) {
+		OnStart.Invoke();
 		PrepareStringBuilder();
 		foreach (DialogueLine line in dialogue.Lines) {
 			yield return StartCoroutine(TypeTextRoutine(line));
@@ -42,7 +45,8 @@ public class Typewriter : MonoBehaviour {
 			}
 			yield return new WaitForSeconds(line.finishPauseTime);
 		}
-		OnFinish();
+		OnEnd.Invoke();
+		callback();
 		yield return null;
 		gameObject.SetActive(false);
 	}
