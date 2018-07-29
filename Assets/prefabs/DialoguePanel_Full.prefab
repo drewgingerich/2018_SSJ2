@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 114505361451368966}
   - component: {fileID: 114612654193382378}
   - component: {fileID: 114008938602714728}
+  - component: {fileID: 114687399088375710}
   m_Layer: 5
   m_Name: DialoguePanel_Full
   m_TagString: Untagged
@@ -91,7 +92,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textBox: {fileID: 114185814481800726}
-  lines: []
   clearLines: 0
 --- !u!114 &114185814481800726
 MonoBehaviour:
@@ -165,6 +165,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   center: 1
   sleep: 1
+--- !u!114 &114687399088375710
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1581097622981860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c981b0677ae934e4993b0e8f5a3f6447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  typewriter: {fileID: 114008938602714728}
 --- !u!114 &114971526572978418
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -7,11 +7,11 @@ public class DialoguePlayer : MonoBehaviour {
 
 	public UnityEvent OnFinish;
 
-	[SerializeField] Typewriter typewriter;
+	[SerializeField] DialogueDisplay display;
 	[SerializeField] Dialogue dialogue;
 
 	public void Activate() {
-		typewriter.TypeDialogue(dialogue, Finish);
+		display.DisplayDialogue(dialogue, Finish);
 	}
 
 	void Finish() {
