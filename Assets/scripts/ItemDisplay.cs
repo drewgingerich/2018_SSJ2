@@ -12,8 +12,11 @@ public class ItemDisplay : MonoBehaviour {
 
 	[SerializeField] DialogueCharacter character;
 	[SerializeField] RawImage picture;
-	[SerializeField] Text textBox;
+	[SerializeField] Text thoughtTextBox;
+	[SerializeField] Text itemTextBox;
 	[SerializeField] float textSpeed = 0.03f;
+
+	bool interrupted = false;
 
 	public void DisplayItem(Item item, System.Action callback) {
 		StopAllCoroutines();
@@ -22,12 +25,18 @@ public class ItemDisplay : MonoBehaviour {
 		StartCoroutine(DisplayItemRoutine(item, callback));
 	}
 
+	public void Interrupt() {
+
+	}
+
 	IEnumerator DisplayItemRoutine(Item item, System.Action callback) {
 		OnStart.Invoke();
+		itemTextBox.text = !string.IsNullOrEmpty(item.text) ? item.text : "";
 		StringBuilder sb = new StringBuilder();
 		yield return StartCoroutine(DisplayItemDescriptionRoutine(item.description, sb));
-		yield return null;
-		yield return StartCoroutine(DisplayItemTextRoutine(item.text, sb));
+		// yield return null;
+		// if (string.IsNullOrEmpty(item.text))
+		// 	yield return StartCoroutine(DisplayItemTextRoutine(item.text, sb));
 		callback();
 		OnEnd.Invoke();
 		yield return null;
@@ -45,7 +54,7 @@ public class ItemDisplay : MonoBehaviour {
 			int currentIndex = sb.Length - endTagLength - description.Length + i;
 			sb.Remove(currentIndex, 1);
 			sb.Insert(currentIndex - visibleTextOffset, description[i]);
-			textBox.text = sb.ToString();
+			thoughtTextBox.text = sb.ToString();
 			yield return new WaitForSeconds(textSpeed);
 		}
 
@@ -58,7 +67,7 @@ public class ItemDisplay : MonoBehaviour {
 		sb.Append('\n');
 		sb.Append('\n');
 		sb.Append(text);
-		textBox.text = sb.ToString();
+		thoughtTextBox.text = sb.ToString();
 
 		while (!CheckForInterrupt()) {
 			yield return null;
@@ -66,6 +75,10 @@ public class ItemDisplay : MonoBehaviour {
 	}
 
 	bool CheckForInterrupt() {
+		if (interrupted) {
+			interrupted = false;
+			return true;
+		}
 		return Input.GetMouseButtonUp(0)
 			|| Input.GetKeyUp(KeyCode.Return)
 			|| Input.GetKeyUp(KeyCode.Space)
