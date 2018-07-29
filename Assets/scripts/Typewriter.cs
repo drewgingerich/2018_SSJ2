@@ -3,15 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Events;
 
 public class Typewriter : MonoBehaviour {
 
-	public UnityEvent OnStart;
-	public UnityEvent OnEnd;
-
 	[SerializeField] Text textBox;
-	[SerializeField] List<DialogueLine> lines;
 	[SerializeField] bool clearLines = false;
 
 	const string hideTags = "<color=#00000000></color>";
@@ -26,37 +21,22 @@ public class Typewriter : MonoBehaviour {
 		closingTagLength = "</color>".Length;
 	}
 
-	public void TypeDialogue(Dialogue dialogue, System.Action callback) {
-		StopAllCoroutines();
-		gameObject.SetActive(true);
-		StartCoroutine(TypeDialogueRoutine(dialogue, callback));
-	}
-
-	IEnumerator TypeDialogueRoutine(Dialogue dialogue, System.Action callback) {
-		OnStart.Invoke();
+	public IEnumerator TypeDialogueRoutine(Dialogue dialogue) {
 		PrepareStringBuilder();
 		foreach (DialogueLine line in dialogue.Lines) {
 			yield return StartCoroutine(TypeTextRoutine(line));
+			yield return new WaitForSeconds(line.finishPauseTime);
 			if (clearLines) {
 				PrepareStringBuilder();
 			} else {
 				sb.Insert(sb.Length - hideTagLength, '\n');
 				sb.Insert(sb.Length - hideTagLength, '\n');
 			}
-			yield return new WaitForSeconds(line.finishPauseTime);
 		}
-		OnEnd.Invoke();
-		callback();
-		yield return null;
-		gameObject.SetActive(false);
+		textBox.text = "";
 	}
 
-	void PrepareStringBuilder() {
-		sb = new StringBuilder();
-		sb.Append(hideTags);
-	}
-
-	IEnumerator TypeTextRoutine(DialogueLine line) {
+	public IEnumerator TypeTextRoutine(DialogueLine line) {
 		string colorhex = ColorUtility.ToHtmlStringRGB(line.character.color);
 
 		sb.Insert(sb.Length - hideTagLength, string.Format("<color=#{0}></color>", colorhex));
@@ -74,5 +54,10 @@ public class Typewriter : MonoBehaviour {
 				break;
 			yield return new WaitForSeconds(line.textSpeed);
 		}
+	}
+
+	void PrepareStringBuilder() {
+		sb = new StringBuilder();
+		sb.Append(hideTags);
 	}
 }
