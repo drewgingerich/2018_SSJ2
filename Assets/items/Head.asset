@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Name: Head
   m_EditorClassIdentifier: 
   picture: {fileID: 2800000, guid: 05fc1f1c813fb49118c716577f2176e2, type: 3}
-  description: Test
+  description: 'Oh it''s just a mannequin head. This is fine. Super normal...
+
+
+    Well, I wonder if this key goes to anything in the room?'
   text: 

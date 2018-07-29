@@ -12,5 +12,12 @@ MonoBehaviour:
   m_Name: Lockbox
   m_EditorClassIdentifier: 
   picture: {fileID: 2800000, guid: 870b0846751ea413e8064eef40fc7be7, type: 3}
-  description: Test
+  description: 'The key fits!
+
+    Aaaand it''s full of mice.
+
+    Aaaand they''re stealing all of the documents inside...
+
+
+    Ah, they left one!'
   text: 

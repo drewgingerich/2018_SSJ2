@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Letter_Nancy
   m_EditorClassIdentifier: 
   picture: {fileID: 2800000, guid: 80fa10f979c0a4fe7862414b5f83db1e, type: 3}
-  description: Test
+  description: An old handwritten letter on faded paper.
   text: "Dearest father,\n\nI was so happy to receive word that you accepted my spouse\u2019s
     offer to help stabilize the farm. I know how important the land is to you and
     I hated the idea of you losing it to that nasty bigot, Mr. Standshir so much!

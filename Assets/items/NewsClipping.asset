@@ -12,15 +12,11 @@ MonoBehaviour:
   m_Name: NewsClipping
   m_EditorClassIdentifier: 
   picture: {fileID: 2800000, guid: 0b2c9ae8aac9545058928e5e73de2b74, type: 3}
-  description: Test
-  text: Today local police detained Jonathan Boyer for the potential murder of his
-    only daughter, Nancy Boyer. Police were contacted after a message was left at
-    our office by a concerned neighbor that decided to investigate after hearing shocking
-    rumors about the disappearance of Nancy Boyer. The neighbor requested not to be
-    named, but is known to by an upstanding citizen. This neighbor reported that Jonathan
-    Boyer appeared extremely agitated, and also noted a large quantity of dried blood
-    on the blades of a Boyer farm combine. Police confirmed both accounts. Jonathan
-    Boyer had no explanation for the blood on the combine. Jonathan Boyer has not
-    admitted to anything yet, but is currently undergoing questioning at the police
-    station. Police have blocked off the Boyer residence as a crime scene and are
-    conducting a close inspection.
+  description: A news clipping. It was cut out roughly and quickly, almost angrily.
+  text: Today local police detained Jonathan Boyer, known to most as a reserved man
+    operating Boyer Farm past the outskirts of town. He is suspected of killing his
+    only daughter, Nancy Boyer. Police were contacted after a message was left by
+    a concerned neighbor citing blood on the Boyer farm combine and an out-of-character,
+    agitated demeanor presented by Jonathan Boyer. When police confronted him, Jonathan
+    Boyer had no explanation for the blood on the combine. Jonathan Boyer is currently
+    undergoing questioning at the police station.

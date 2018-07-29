@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Name: Diary
   m_EditorClassIdentifier: 
   picture: {fileID: 2800000, guid: a5563e18a06014c0bb9f25e492cb88f1, type: 3}
-  description: Test
-  text: The Springfield police department has agreed to settle for a total of $100,000
-    in return for Jonathan Boyer and immediate family signing a Non-Disclosure Agreement
-    for information surrounding the Boyer Farm case, and for Jonathan Boyer and immediate
-    family to cease present and future lawsuits against the Springfield police department
-    regarding the Boyer Farm case. This offer will remain open for five business days.
-    Should you write back accepting the offer, a date will be determined for signing
-    the legally-binding documents.
+  description: A diary. The name Jonathan Boyer is scrawled on the inside cover. One
+    of the pages is bookmarked.
+  text: "Things seem to have worked out. The Springfield police department has offered
+    to settle for a hundred thousand in return for my silence surrounding my wrongful
+    arrest. I still don't know where the blood on the combine came from, but I suspect
+    it was planted by Mr. Standshir. For my sake I'll let it go: I know they'll bring
+    no charges against him. That aside, I\u2019m going to accept their offer. I know
+    Nancy and Emory don\u2019t expect me to repay them, but I want them to have that
+    money for their honeymoon. Plus a little extra will allow me to visit them up
+    in New York and hire a worker, now that Nancy is married.\n"

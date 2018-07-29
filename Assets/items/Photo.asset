@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Name: Photo
   m_EditorClassIdentifier: 
   picture: {fileID: 2800000, guid: 2cff224e2fd6a4211a404c28da530855, type: 3}
-  description: Test
-  text: "-Rumors of Nancy\u2019s death were effectively disproven with her return
-    to town."
+  description: A photo with a caption, clipped cleanly from the NY Daily.
+  text: "- Nancy\u2019s return from New York quickly dispersed rumors about her death."
