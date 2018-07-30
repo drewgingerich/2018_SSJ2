@@ -15606,22 +15606,22 @@ Prefab:
     - target: {fileID: 224876466810258554, guid: 6345bde16634c49c0bf3978afaa9e09c,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 22.322233
+      value: 22.35434
       objectReference: {fileID: 0}
     - target: {fileID: 224066836289127052, guid: 6345bde16634c49c0bf3978afaa9e09c,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -251.11111
+      value: -251.12717
       objectReference: {fileID: 0}
     - target: {fileID: 224066836289127052, guid: 6345bde16634c49c0bf3978afaa9e09c,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 15.121512
+      value: 15.219976
       objectReference: {fileID: 0}
     - target: {fileID: 224876466810258554, guid: 6345bde16634c49c0bf3978afaa9e09c,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -202.38924
+      value: -202.34001
       objectReference: {fileID: 0}
     - target: {fileID: 114287132825731146, guid: 6345bde16634c49c0bf3978afaa9e09c,
         type: 2}
@@ -16015,8 +16015,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.9339623, g: 0.8280194, b: 0.58592916, a: 1}
-  m_Intensity: 0.06
-  m_Range: 100
+  m_Intensity: 0.1
+  m_Range: 5
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
