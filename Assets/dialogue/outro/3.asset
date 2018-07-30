@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: 3
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: 7f130f7dd0e164125855ea22a6c90755, type: 2}
-  text: I can't wait to see the look on their face when they hear the real story.
-  textSpeed: 0.03
-  finishPauseTime: 2
+  text: I can't wait to see the look on their faces when I tell them the true story.
+  textSpeed: 0.035
+  finishPauseTime: 1
