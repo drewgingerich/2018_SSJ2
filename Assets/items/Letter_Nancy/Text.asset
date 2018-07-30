@@ -14,10 +14,10 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: e6cd9aa49b0ce4d55a22ee42913b1ad4, type: 2}
   text: "Dearest father,\n\nI was so happy to receive word that you accepted my spouse\u2019s
     offer to help stabilize the farm. I know how important the land is to you and
-    I hated the idea of you selling it to that nasty bigot, Mr. Standshir! I know
-    it was a tough decision for you to accept our help and you said you have every
-    intention of paying Emory back, but I wish you could consider it a gift rather
-    than a debt. I guess I know who I got my prideful nature from...\n\nLovingly yours,\n\nNancy
+    I hated the idea of you losing it to that nasty bigot, Mr. Standshir! I know it
+    was a tough decision for you to accept our help and you said you have every intention
+    of paying Emory back, but I wish you could consider it a gift rather than a debt.
+    I guess I know who I got my prideful nature from...\n\nLovingly yours,\n\nNancy
     Wentworth"
   textSpeed: 0.03
   finishPauseTime: 0
