@@ -12,7 +12,5 @@ MonoBehaviour:
   m_Name: lockbox
   m_EditorClassIdentifier: 
   lines:
-  - {fileID: 11400000, guid: c8c02b7d857934a47949566b2c149ea3, type: 2}
-  - {fileID: 11400000, guid: 678836b6953054a90ab4329071a4ed7d, type: 2}
   - {fileID: 11400000, guid: aa0ab68b07e5c441b92671d08b95f628, type: 2}
   - {fileID: 11400000, guid: b2c757ab368434fc2b120253bbe880bc, type: 2}

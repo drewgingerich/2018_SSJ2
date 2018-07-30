@@ -7,7 +7,7 @@ public class ItemSequencer : ScriptableObject {
 
 	[SerializeField] List<Item> sequence;
 
-	int index = 0;
+	[System.NonSerialized] int index = 0;
 
 	public Item GetNextItem() {
 		if (index == sequence.Count)

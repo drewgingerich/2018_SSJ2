@@ -14,5 +14,5 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: 7f130f7dd0e164125855ea22a6c90755, type: 2}
   text: A diary. The name Jonathan Boyer is scrawled on the inside cover. One of the
     pages is bookmarked.
-  textSpeed: 0.03
-  finishPauseTime: 2
+  textSpeed: 0.02
+  finishPauseTime: 0.2

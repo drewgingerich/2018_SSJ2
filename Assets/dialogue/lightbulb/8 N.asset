@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: 66b2bafc629bd45999240507d4b6185c, type: 2}
   text: So they made me.
-  textSpeed: 0.03
+  textSpeed: 0.05
   finishPauseTime: 1

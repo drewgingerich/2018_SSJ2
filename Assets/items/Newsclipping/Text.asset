@@ -11,13 +11,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9ba1cda2127f493392ce3827487e55a, type: 3}
   m_Name: Text
   m_EditorClassIdentifier: 
-  character: {fileID: 11400000, guid: 66b2bafc629bd45999240507d4b6185c, type: 2}
+  character: {fileID: 11400000, guid: e6cd9aa49b0ce4d55a22ee42913b1ad4, type: 2}
   text: Today local police detained Jonathan Boyer, known to most as a reserved man
     operating Boyer Farm past the outskirts of town. He is suspected of killing his
     only daughter, Nancy Boyer. Police were contacted after a message was left by
-    a concerned neighbor citing blood on the Boyer farm combine and an out-of-character,
-    agitated demeanor presented by Jonathan Boyer. When police confronted him, Jonathan
-    Boyer had no explanation for the blood on the combine. Jonathan Boyer is currently
-    undergoing questioning at the police station.
+    a concerned neighbor citing blood on a combine at Boyer Farm, and Jonathan Boyer's
+    out-of-character, agitated demeanor. When police confronted him, Jonathan Boyer
+    had no explanation for the blood on the combine. Jonathan Boyer is currently undergoing
+    questioning at the police station.
   textSpeed: 0.03
-  finishPauseTime: 2
+  finishPauseTime: 0

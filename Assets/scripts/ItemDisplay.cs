@@ -11,8 +11,7 @@ public class ItemDisplay : MonoBehaviour {
 	public UnityEvent OnEnd;
 
 	[SerializeField] RawImage picture;
-	[SerializeField] Typewriter topTypewriter;
-	[SerializeField] Typewriter midTypewriter;
+	[SerializeField] Typewriter thoughtTypewriter;
 	[SerializeField] Text itemTextBox;
 	[SerializeField] GameObject nextButton;
 
@@ -34,8 +33,7 @@ public class ItemDisplay : MonoBehaviour {
 		OnStart.Invoke();
 		bool itemTextIsPresent = item.text != null;
 		itemTextBox.text = itemTextIsPresent ? item.text.text : "";
-		Typewriter selectedTypewriter = itemTextIsPresent ? topTypewriter : midTypewriter;
-		yield return StartCoroutine((selectedTypewriter.TypeDialogueRoutine(item.thoughts, spaceBetweenLines:0)));
+		yield return StartCoroutine((thoughtTypewriter.TypeDialogueRoutine(item.thoughts, spaceBetweenLines:0)));
 		nextButton.SetActive(true);
 		while (!CheckForInterrupt()) {
 			yield return null;

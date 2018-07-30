@@ -11,12 +11,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9ba1cda2127f493392ce3827487e55a, type: 3}
   m_Name: Text
   m_EditorClassIdentifier: 
-  character: {fileID: 11400000, guid: 66b2bafc629bd45999240507d4b6185c, type: 2}
+  character: {fileID: 11400000, guid: e6cd9aa49b0ce4d55a22ee42913b1ad4, type: 2}
   text: "Dear Nancy,\n\nThis is wonderful news! You're the best person I know, and
     you deserve someone that makes you happy. But I must wonder, how on Earth did
     you meet them? You're a small town girl, and they... well, they're big city folk
     with a healthy bank account. And they're a looker and a kind soul to boot. I'm
-    impressed. Do they have siblings? I'm happy for you, and I look forward to the
-    wedding!\n\nYours truly, \n\nClaire"
+    impressed. Do they have siblings...? I jest. I'm happy for you, and I look forward
+    to the wedding!\n\nYours truly, \n\nClaire"
   textSpeed: 0.03
-  finishPauseTime: 2
+  finishPauseTime: 0

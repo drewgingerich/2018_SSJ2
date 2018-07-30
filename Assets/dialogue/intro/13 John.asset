@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: 13 John
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: 05da0b3bf69b44decb16f91252cc9952, type: 2}
-  text: I heard she kills anyone who spends the night at the abandoned house.
+  text: I heard she haunts the abandoned house and kills anyone who spends the night
+    there.
   textSpeed: 0.03
   finishPauseTime: 1
