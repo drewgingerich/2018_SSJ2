@@ -19,7 +19,7 @@ public class Typewriter : MonoBehaviour {
 		closingTagLength = "</color>".Length;
 	}
 
-	public IEnumerator TypeDialogueRoutine(Dialogue dialogue, int spaceBetweenLines = 2) {
+	public IEnumerator TypeDialogueRoutine(Dialogue dialogue, int spaceBetweenLines = 1) {
 		StringBuilder sb = PrepareStringBuilder();
 		foreach (DialogueLine line in dialogue.Lines) {
 			yield return StartCoroutine(TypeTextRoutine(line, sb));
