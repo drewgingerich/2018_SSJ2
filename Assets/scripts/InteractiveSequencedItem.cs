@@ -9,7 +9,7 @@ public class InteractiveSequencedItem : Interactable {
 
 	Item item;
 
-	public override void Intercept() {
+	protected override void Interact() {
 		if (item == null)
 			item = itemSequence.GetNextItem();
 		itemDisplay.DisplayItem(item, Finish);
