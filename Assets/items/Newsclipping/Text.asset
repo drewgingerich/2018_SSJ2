@@ -8,11 +8,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a97b94a37cbd4942a7048c87ffc821b, type: 3}
-  m_Name: NewsClipping
+  m_Script: {fileID: 11500000, guid: a9ba1cda2127f493392ce3827487e55a, type: 3}
+  m_Name: Text
   m_EditorClassIdentifier: 
-  picture: {fileID: 2800000, guid: 0b2c9ae8aac9545058928e5e73de2b74, type: 3}
-  description: A news clipping. It was cut out roughly and quickly, almost angrily.
+  character: {fileID: 11400000, guid: 66b2bafc629bd45999240507d4b6185c, type: 2}
   text: Today local police detained Jonathan Boyer, known to most as a reserved man
     operating Boyer Farm past the outskirts of town. He is suspected of killing his
     only daughter, Nancy Boyer. Police were contacted after a message was left by
@@ -20,3 +19,5 @@ MonoBehaviour:
     agitated demeanor presented by Jonathan Boyer. When police confronted him, Jonathan
     Boyer had no explanation for the blood on the combine. Jonathan Boyer is currently
     undergoing questioning at the police station.
+  textSpeed: 0.03
+  finishPauseTime: 2

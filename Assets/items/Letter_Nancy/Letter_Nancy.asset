@@ -9,11 +9,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a97b94a37cbd4942a7048c87ffc821b, type: 3}
-  m_Name: Head
+  m_Name: Letter_Nancy
   m_EditorClassIdentifier: 
-  picture: {fileID: 2800000, guid: 05fc1f1c813fb49118c716577f2176e2, type: 3}
-  description: 'Oh it''s just a mannequin head. This is fine. Super normal...
-
-
-    Well, I wonder if this key goes to anything in the room?'
-  text: 
+  picture: {fileID: 2800000, guid: 80fa10f979c0a4fe7862414b5f83db1e, type: 3}
+  thoughts: {fileID: 11400000, guid: fe7ef66384ada44b98a22c72379b3b3a, type: 2}
+  text: {fileID: 11400000, guid: df85b155ab1d0423dbbf4b823050ee63, type: 2}

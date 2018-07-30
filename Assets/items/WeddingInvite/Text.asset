@@ -8,15 +8,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a97b94a37cbd4942a7048c87ffc821b, type: 3}
-  m_Name: WeddingInvite
+  m_Script: {fileID: 11500000, guid: a9ba1cda2127f493392ce3827487e55a, type: 3}
+  m_Name: Text
   m_EditorClassIdentifier: 
-  picture: {fileID: 2800000, guid: da84f780a880d4ce0aed59aeb81a3f03, type: 3}
-  description: An RSVP for a wedding. And handwritten note is scrawled in the empty
-    space.
+  character: {fileID: 11400000, guid: 66b2bafc629bd45999240507d4b6185c, type: 2}
   text: "Dear Nancy,\n\nThis is wonderful news! You're the best person I know, and
     you deserve someone that makes you happy. But I must wonder, how on Earth did
     you meet them? You're a small town girl, and they... well, they're big city folk
     with a healthy bank account. And they're a looker and a kind soul to boot. I'm
     impressed. Do they have siblings? I'm happy for you, and I look forward to the
-    wedding!\n\nYours truly, \n\nClaire\n"
+    wedding!\n\nYours truly, \n\nClaire"
+  textSpeed: 0.03
+  finishPauseTime: 2

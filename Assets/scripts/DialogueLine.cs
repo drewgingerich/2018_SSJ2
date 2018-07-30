@@ -6,7 +6,7 @@ using UnityEngine;
 public class DialogueLine : ScriptableObject {
 
 	public DialogueCharacter character;
-	public string text;
+	[TextArea(10, 15)] public string text;
 	public float textSpeed = 0.03f;
 	public float finishPauseTime = 2f;
 }

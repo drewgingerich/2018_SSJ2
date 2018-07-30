@@ -8,13 +8,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a97b94a37cbd4942a7048c87ffc821b, type: 3}
-  m_Name: Letter_Standshir
+  m_Script: {fileID: 11500000, guid: a9ba1cda2127f493392ce3827487e55a, type: 3}
+  m_Name: Text
   m_EditorClassIdentifier: 
-  picture: {fileID: 2800000, guid: 032ab4f60cf0e4d059a602e3724eb17b, type: 3}
-  description: A typed letter. It's old, but the ink is still glossy.
+  character: {fileID: 11400000, guid: 66b2bafc629bd45999240507d4b6185c, type: 2}
   text: "Mr. Boyer,\n\nIt has come to my attention that you have something of a financial
     problem. Now, I've been working hard and doing well for myself, and I'd like to
     offer you a hand. I will buy your land and home for $25,000. \n\nLet me know soon
     and I\u2019ll have my lawyer take us through the sale.\n\nYour neighbor,\n\nMr.
-    Standshir\n"
+    Standshir"
+  textSpeed: 0.03
+  finishPauseTime: 2

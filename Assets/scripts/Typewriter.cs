@@ -8,35 +8,34 @@ public class Typewriter : MonoBehaviour {
 
 	[SerializeField] Text textBox;
 	[SerializeField] bool clearLines = false;
+	[SerializeField] bool clearOnFinish = false;
 
 	const string hideTags = "<color=#00000000></color>";
 	int hideTagLength;
 	int closingTagLength;
-
-	int textIndex;
-	StringBuilder sb;
 
 	void Awake() {
 		hideTagLength = hideTags.Length;
 		closingTagLength = "</color>".Length;
 	}
 
-	public IEnumerator TypeDialogueRoutine(Dialogue dialogue) {
-		PrepareStringBuilder();
+	public IEnumerator TypeDialogueRoutine(Dialogue dialogue, int spaceBetweenLines = 2) {
+		StringBuilder sb = PrepareStringBuilder();
 		foreach (DialogueLine line in dialogue.Lines) {
-			yield return StartCoroutine(TypeTextRoutine(line));
+			yield return StartCoroutine(TypeTextRoutine(line, sb));
 			yield return new WaitForSeconds(line.finishPauseTime);
 			if (clearLines) {
-				PrepareStringBuilder();
+				sb = PrepareStringBuilder();
 			} else {
 				sb.Insert(sb.Length - hideTagLength, '\n');
 				sb.Insert(sb.Length - hideTagLength, '\n');
 			}
 		}
-		textBox.text = "";
+		if (clearOnFinish)
+			textBox.text = "";
 	}
 
-	public IEnumerator TypeTextRoutine(DialogueLine line) {
+	public IEnumerator TypeTextRoutine(DialogueLine line , StringBuilder sb) {
 		string colorhex = ColorUtility.ToHtmlStringRGB(line.character.color);
 
 		sb.Insert(sb.Length - hideTagLength, string.Format("<color=#{0}></color>", colorhex));
@@ -56,8 +55,13 @@ public class Typewriter : MonoBehaviour {
 		}
 	}
 
-	void PrepareStringBuilder() {
-		sb = new StringBuilder();
+	public void ClearText() {
+		textBox.text = "";
+	}
+
+	StringBuilder PrepareStringBuilder() {
+		StringBuilder sb = new StringBuilder();
 		sb.Append(hideTags);
+		return sb;
 	}
 }

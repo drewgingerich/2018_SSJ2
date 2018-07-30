@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a97b94a37cbd4942a7048c87ffc821b, type: 3}
+  m_Name: Letter_Standshir
+  m_EditorClassIdentifier: 
+  picture: {fileID: 2800000, guid: 032ab4f60cf0e4d059a602e3724eb17b, type: 3}
+  thoughts: {fileID: 11400000, guid: edbae553552e84fde8f7b87e2edf2ce8, type: 2}
+  text: {fileID: 11400000, guid: a0e7daf16db894026921205e91c2962b, type: 2}

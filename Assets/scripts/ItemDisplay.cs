@@ -12,8 +12,10 @@ public class ItemDisplay : MonoBehaviour {
 
 	[SerializeField] DialogueCharacter character;
 	[SerializeField] RawImage picture;
-	[SerializeField] Text thoughtTextBox;
+	[SerializeField] Typewriter topTypewriter;
+	[SerializeField] Typewriter midTypewriter;
 	[SerializeField] Text itemTextBox;
+	[SerializeField] GameObject nextButton;
 	[SerializeField] float textSpeed = 0.03f;
 
 	bool interrupted = false;
@@ -21,67 +23,37 @@ public class ItemDisplay : MonoBehaviour {
 	public void DisplayItem(Item item, System.Action callback) {
 		StopAllCoroutines();
 		gameObject.SetActive(true);
+		nextButton.SetActive(false);
 		picture.texture = item.picture;
 		StartCoroutine(DisplayItemRoutine(item, callback));
 	}
 
 	public void Interrupt() {
-
+		interrupted = true;
 	}
 
 	IEnumerator DisplayItemRoutine(Item item, System.Action callback) {
 		OnStart.Invoke();
-		itemTextBox.text = !string.IsNullOrEmpty(item.text) ? item.text : "";
-		StringBuilder sb = new StringBuilder();
-		yield return StartCoroutine(DisplayItemDescriptionRoutine(item.description, sb));
-		// yield return null;
-		// if (string.IsNullOrEmpty(item.text))
-		// 	yield return StartCoroutine(DisplayItemTextRoutine(item.text, sb));
+		bool itemTextIsPresent = item.text != null;
+		itemTextBox.text = itemTextIsPresent ? item.text.text : "";
+		Typewriter selectedTypewriter = itemTextIsPresent ? topTypewriter : midTypewriter;
+		yield return StartCoroutine((selectedTypewriter.TypeDialogueRoutine(item.thoughts, spaceBetweenLines:0)));
+		nextButton.SetActive(true);
+		while (!CheckForInterrupt()) {
+			yield return null;
+		}
 		callback();
 		OnEnd.Invoke();
 		yield return null;
 		gameObject.SetActive(false);
 	}
 
-	IEnumerator DisplayItemDescriptionRoutine(string description, StringBuilder sb) {
-		string charColor = ColorUtility.ToHtmlStringRGB(character.color);
-		sb.AppendFormat("<i><color=#{0}></color><color=#000000ff>{1}</color></i>", charColor, description);
-
-		int endTagLength = "</color></i>".Length;
-		int visibleTextOffset = "</color><color=#000000ff>".Length;
-
-		for (int i = 0; i < description.Length; i++) {
-			int currentIndex = sb.Length - endTagLength - description.Length + i;
-			sb.Remove(currentIndex, 1);
-			sb.Insert(currentIndex - visibleTextOffset, description[i]);
-			thoughtTextBox.text = sb.ToString();
-			yield return new WaitForSeconds(textSpeed);
-		}
-
-		while (!CheckForInterrupt()) {
-			yield return null;
-		}
-	}
-
-	IEnumerator DisplayItemTextRoutine(string text, StringBuilder sb) {
-		sb.Append('\n');
-		sb.Append('\n');
-		sb.Append(text);
-		thoughtTextBox.text = sb.ToString();
-
-		while (!CheckForInterrupt()) {
-			yield return null;
-		}
-	}
-
 	bool CheckForInterrupt() {
 		if (interrupted) {
 			interrupted = false;
 			return true;
+		} else {
+			return false;
 		}
-		return Input.GetMouseButtonUp(0)
-			|| Input.GetKeyUp(KeyCode.Return)
-			|| Input.GetKeyUp(KeyCode.Space)
-			|| Input.GetKeyUp(KeyCode.DownArrow);
 	}
 }

@@ -9,15 +9,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a97b94a37cbd4942a7048c87ffc821b, type: 3}
-  m_Name: Lockbox
+  m_Name: Head
   m_EditorClassIdentifier: 
-  picture: {fileID: 2800000, guid: 870b0846751ea413e8064eef40fc7be7, type: 3}
-  description: 'The key fits!
-
-    Aaaand it''s full of mice.
-
-    Aaaand they''re stealing all of the documents inside...
-
-
-    Ah, they left one!'
-  text: 
+  picture: {fileID: 2800000, guid: 05fc1f1c813fb49118c716577f2176e2, type: 3}
+  thoughts: {fileID: 11400000, guid: 2471a4e14a8954191887ce1d086e40bc, type: 2}
+  text: {fileID: 0}
