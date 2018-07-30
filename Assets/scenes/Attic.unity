@@ -15628,22 +15628,22 @@ Prefab:
     - target: {fileID: 224876466810258554, guid: 6345bde16634c49c0bf3978afaa9e09c,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 22.109419
+      value: 22.167889
       objectReference: {fileID: 0}
     - target: {fileID: 224066836289127052, guid: 6345bde16634c49c0bf3978afaa9e09c,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -251.00471
+      value: -251.03395
       objectReference: {fileID: 0}
     - target: {fileID: 224066836289127052, guid: 6345bde16634c49c0bf3978afaa9e09c,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 15.792442
+      value: 15.321923
       objectReference: {fileID: 0}
     - target: {fileID: 224876466810258554, guid: 6345bde16634c49c0bf3978afaa9e09c,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -202.05377
+      value: -202.28903
       objectReference: {fileID: 0}
     - target: {fileID: 114287132825731146, guid: 6345bde16634c49c0bf3978afaa9e09c,
         type: 2}
@@ -15659,6 +15659,26 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.y
       value: -176.95001
+      objectReference: {fileID: 0}
+    - target: {fileID: 114597003158499112, guid: 6345bde16634c49c0bf3978afaa9e09c,
+        type: 2}
+      propertyPath: OnStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2036183723}
+    - target: {fileID: 114597003158499112, guid: 6345bde16634c49c0bf3978afaa9e09c,
+        type: 2}
+      propertyPath: OnStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Pause
+      objectReference: {fileID: 0}
+    - target: {fileID: 114597003158499112, guid: 6345bde16634c49c0bf3978afaa9e09c,
+        type: 2}
+      propertyPath: OnEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2036183723}
+    - target: {fileID: 114597003158499112, guid: 6345bde16634c49c0bf3978afaa9e09c,
+        type: 2}
+      propertyPath: OnEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Unpause
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6345bde16634c49c0bf3978afaa9e09c, type: 2}
@@ -17140,7 +17160,7 @@ MonoBehaviour:
   OnStart:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 342683308}
+      - m_Target: {fileID: 423290794}
         m_MethodName: Activate
         m_Mode: 1
         m_Arguments:
