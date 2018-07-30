@@ -225,10 +225,10 @@ RectTransform:
   m_PrefabInternal: {fileID: 44188163}
 --- !u!114 &44188165 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114008938602714728, guid: 5064d52687432409ba06ef4b56639967,
+  m_CorrespondingSourceObject: {fileID: 114687399088375710, guid: 5064d52687432409ba06ef4b56639967,
     type: 2}
   m_PrefabInternal: {fileID: 44188163}
-  m_Script: {fileID: 11500000, guid: 74dfd1a06edc847b6a719842ae567f86, type: 3}
+  m_Script: {fileID: 11500000, guid: c981b0677ae934e4993b0e8f5a3f6447, type: 3}
 --- !u!1 &52788264
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,7 +438,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  typewriter: {fileID: 44188165}
+  display: {fileID: 44188165}
   dialogue: {fileID: 11400000, guid: f16ac61a49d00447aba695b9279f764e, type: 2}
 --- !u!114 &1259921568
 MonoBehaviour:

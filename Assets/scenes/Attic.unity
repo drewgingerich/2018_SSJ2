@@ -15606,22 +15606,22 @@ Prefab:
     - target: {fileID: 224876466810258554, guid: 6345bde16634c49c0bf3978afaa9e09c,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 22.18597
+      value: 22.322233
       objectReference: {fileID: 0}
     - target: {fileID: 224066836289127052, guid: 6345bde16634c49c0bf3978afaa9e09c,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -251.043
+      value: -251.11111
       objectReference: {fileID: 0}
     - target: {fileID: 224066836289127052, guid: 6345bde16634c49c0bf3978afaa9e09c,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 15.33442
+      value: 15.121512
       objectReference: {fileID: 0}
     - target: {fileID: 224876466810258554, guid: 6345bde16634c49c0bf3978afaa9e09c,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -202.28279
+      value: -202.38924
       objectReference: {fileID: 0}
     - target: {fileID: 114287132825731146, guid: 6345bde16634c49c0bf3978afaa9e09c,
         type: 2}
@@ -15741,7 +15741,7 @@ Prefab:
     - target: {fileID: 114616787712052790, guid: 9134eac9c524746baabeb6f3ee7f3903,
         type: 2}
       propertyPath: m_FontData.m_Alignment
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9134eac9c524746baabeb6f3ee7f3903, type: 2}
@@ -17108,7 +17108,7 @@ MonoBehaviour:
   OnStart:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1569078792}
+      - m_Target: {fileID: 342683308}
         m_MethodName: Activate
         m_Mode: 1
         m_Arguments:
