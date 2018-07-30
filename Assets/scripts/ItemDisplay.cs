@@ -10,13 +10,11 @@ public class ItemDisplay : MonoBehaviour {
 	public UnityEvent OnStart;
 	public UnityEvent OnEnd;
 
-	[SerializeField] DialogueCharacter character;
 	[SerializeField] RawImage picture;
 	[SerializeField] Typewriter topTypewriter;
 	[SerializeField] Typewriter midTypewriter;
 	[SerializeField] Text itemTextBox;
 	[SerializeField] GameObject nextButton;
-	[SerializeField] float textSpeed = 0.03f;
 
 	bool interrupted = false;
 
