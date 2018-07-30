@@ -5465,6 +5465,28 @@ Prefab:
       propertyPath: OnUnpause.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2036183723}
+    - target: {fileID: 224940764175532860, guid: ca08127634b3b41a89bb6bdadf6da94b,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114724196773805288, guid: ca08127634b3b41a89bb6bdadf6da94b,
+        type: 2}
+      propertyPath: m_Text
+      value: '<b>Move</b>
+
+        [left and right arrows]
+
+
+        <b>Interact</b>
+
+        [left click]
+
+
+        <b>Pause</b>
+
+        [space]'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca08127634b3b41a89bb6bdadf6da94b, type: 2}
   m_IsPrefabAsset: 0
@@ -15556,12 +15578,12 @@ Prefab:
     - target: {fileID: 224525303700070436, guid: 6345bde16634c49c0bf3978afaa9e09c,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 224525303700070436, guid: 6345bde16634c49c0bf3978afaa9e09c,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -0.059459
+      value: -0.059448242
       objectReference: {fileID: 0}
     - target: {fileID: 224525303700070436, guid: 6345bde16634c49c0bf3978afaa9e09c,
         type: 2}
@@ -15632,6 +15654,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.x
       value: -19.000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 224852827357690960, guid: 6345bde16634c49c0bf3978afaa9e09c,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -176.95001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6345bde16634c49c0bf3978afaa9e09c, type: 2}

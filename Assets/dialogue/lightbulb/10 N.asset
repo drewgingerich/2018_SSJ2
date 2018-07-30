@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: 10 N
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: 66b2bafc629bd45999240507d4b6185c, type: 2}
-  text: Just press [esc].
+  text: Just press the spacebar.
   textSpeed: 0.03
   finishPauseTime: 1
