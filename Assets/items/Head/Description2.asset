@@ -15,5 +15,5 @@ MonoBehaviour:
   text: '
 
     This is fine.'
-  textSpeed: 0.05
+  textSpeed: 0.04
   finishPauseTime: 1.2
