@@ -27,8 +27,9 @@ public class Typewriter : MonoBehaviour {
 			if (clearLines) {
 				sb = PrepareStringBuilder();
 			} else {
-				sb.Insert(sb.Length - hideTagLength, '\n');
-				sb.Insert(sb.Length - hideTagLength, '\n');
+				for (int i = 0; i < spaceBetweenLines + 1; i++) {
+					sb.Insert(sb.Length - hideTagLength, '\n');
+				}
 			}
 		}
 		if (clearOnFinish)
