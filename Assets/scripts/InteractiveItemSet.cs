@@ -10,7 +10,6 @@ public class InteractiveItemSet : Interactable {
 	int itemIndex;
 
 	protected override void Interact() {
-		itemIndex = 0;
 		DisplayNextItem();
 	}
 
@@ -24,6 +23,7 @@ public class InteractiveItemSet : Interactable {
 	}
 
 	void Finish() {
+		itemIndex = items.Count - 1;
 		OnFinishInteracting.Invoke(this);
 	}
 }
