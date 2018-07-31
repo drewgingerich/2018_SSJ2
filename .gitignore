@@ -1,8 +1,14 @@
+.DS_Store
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
+[Pp]lugins/
+[Pp]ackages/
+Probuilder*
+plugins.meta
+[Rr]ecordings/
 Assets/AssetStoreTools*
 
 # Visual Studio cache directory
