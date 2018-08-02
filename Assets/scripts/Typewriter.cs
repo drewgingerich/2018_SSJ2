@@ -3,8 +3,13 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class Typewriter : MonoBehaviour {
+
+	public UnityEvent OnTypeCharacter;
+	public UnityEvent OnStartLine;
+	public UnityEvent OnEndLine;
 
 	[SerializeField] Text textBox;
 	[SerializeField] bool clearLines = false;
@@ -22,7 +27,9 @@ public class Typewriter : MonoBehaviour {
 	public IEnumerator TypeDialogueRoutine(Dialogue dialogue, int spaceBetweenLines = 1) {
 		StringBuilder sb = PrepareStringBuilder();
 		foreach (DialogueLine line in dialogue.Lines) {
+			OnStartLine.Invoke();
 			yield return StartCoroutine(TypeTextRoutine(line, sb));
+			OnEndLine.Invoke();
 			yield return new WaitForSeconds(line.finishPauseTime);
 			if (clearLines) {
 				sb = PrepareStringBuilder();
@@ -52,6 +59,7 @@ public class Typewriter : MonoBehaviour {
 			lineIndex++;
 			if (lineIndex == line.text.Length)
 				break;
+			OnTypeCharacter.Invoke();
 			yield return new WaitForSeconds(line.textSpeed);
 		}
 	}
