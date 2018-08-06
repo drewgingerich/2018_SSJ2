@@ -13,3 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: God?
   color: {r: 0.17421682, g: 0.8207547, b: 0.627451, a: 1}
+  pitch: 0.7

@@ -3,14 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Events;
 
 public class Typewriter : MonoBehaviour {
 
-	public UnityEvent OnTypeCharacter;
-	public UnityEvent OnStartLine;
-	public UnityEvent OnEndLine;
-
+	[SerializeField] TypewriterAudio typewriterAudio;
 	[SerializeField] Text textBox;
 	[SerializeField] bool clearLines = false;
 	[SerializeField] bool clearOnFinish = false;
@@ -27,9 +23,7 @@ public class Typewriter : MonoBehaviour {
 	public IEnumerator TypeDialogueRoutine(Dialogue dialogue, int spaceBetweenLines = 1) {
 		StringBuilder sb = PrepareStringBuilder();
 		foreach (DialogueLine line in dialogue.Lines) {
-			OnStartLine.Invoke();
 			yield return StartCoroutine(TypeTextRoutine(line, sb));
-			OnEndLine.Invoke();
 			yield return new WaitForSeconds(line.finishPauseTime);
 			if (clearLines) {
 				sb = PrepareStringBuilder();
@@ -44,6 +38,8 @@ public class Typewriter : MonoBehaviour {
 	}
 
 	public IEnumerator TypeTextRoutine(DialogueLine line , StringBuilder sb) {
+		typewriterAudio.SetCharacter(line.character);
+
 		string colorhex = ColorUtility.ToHtmlStringRGB(line.character.color);
 
 		sb.Insert(sb.Length - hideTagLength, string.Format("<color=#{0}></color>", colorhex));
@@ -59,7 +55,8 @@ public class Typewriter : MonoBehaviour {
 			lineIndex++;
 			if (lineIndex == line.text.Length)
 				break;
-			OnTypeCharacter.Invoke();
+			if (line.text[lineIndex - 1] != ' ')
+				typewriterAudio.PlayClip();
 			yield return new WaitForSeconds(line.textSpeed);
 		}
 	}

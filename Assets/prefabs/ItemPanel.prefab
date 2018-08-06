@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 222467285118647596}
   - component: {fileID: 114287132825731146}
   - component: {fileID: 114658477799401392}
+  - component: {fileID: 114486429362822974}
   m_Layer: 5
   m_Name: ThoughtText
   m_TagString: Untagged
@@ -144,6 +145,7 @@ GameObject:
   - component: {fileID: 224066836289127052}
   - component: {fileID: 222445787597645976}
   - component: {fileID: 114523859689298100}
+  - component: {fileID: 114237961274382500}
   m_Layer: 5
   m_Name: ItemText
   m_TagString: Untagged
@@ -210,6 +212,19 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Next
+--- !u!114 &114237961274382500
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1917612285830152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1741964061, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
 --- !u!114 &114287132825731146
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -232,7 +247,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 20
-    m_FontStyle: 0
+    m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 48
@@ -405,6 +420,19 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!114 &114486429362822974
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1285106576465264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1741964061, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
 --- !u!114 &114523859689298100
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -523,6 +551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74dfd1a06edc847b6a719842ae567f86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  typewriterAudio: {fileID: 0}
   textBox: {fileID: 114287132825731146}
   clearLines: 0
   clearOnFinish: 0
@@ -603,8 +632,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 116.65, y: -257.89453}
-  m_SizeDelta: {x: 281, y: 218.92332}
+  m_AnchoredPosition: {x: 116.65, y: -251.2}
+  m_SizeDelta: {x: 281, y: 15.357143}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224259038095758474
 RectTransform:
@@ -642,7 +671,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 800, y: 0}
+  m_AnchoredPosition: {x: 800, y: -0.059448242}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224558341354792262
@@ -700,7 +729,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50, y: -148}
+  m_AnchoredPosition: {x: -19.000006, y: -176.95001}
   m_SizeDelta: {x: 100, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224876466810258554
@@ -718,8 +747,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 116.65, y: -100.48834}
-  m_SizeDelta: {x: 281, y: 35.88907}
+  m_AnchoredPosition: {x: 116.65, y: -202.27142}
+  m_SizeDelta: {x: 281, y: 22.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224966873035075506
 RectTransform:

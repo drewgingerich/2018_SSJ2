@@ -2,43 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class TypewriterAudio : MonoBehaviour {
 
-	[SerializeField] Transform playTarget;
-	[SerializeField] List<AudioClip> clips;
-	[SerializeField] float speed = 1;
+	[SerializeField] AudioClip clip;
+	[SerializeField] int skipped = 1;
 
-	float waitTime;
-	AudioClip lastPlayed;
-	Coroutine routine;
+	AudioSource audioSource;
+	DialogueCharacter character;
+	int timesPlayed = 0;
 
 	void Awake() {
-		float baseWaitTime = 0.1f;
-		waitTime = baseWaitTime / speed;
+		audioSource = GetComponent<AudioSource>();
 	}
 
-	public void PlayAudio() {
-		routine = StartCoroutine(PlayAudioRoutine());
+	void Start() {
+		audioSource.clip = clip;
+		audioSource.volume = 0.5f;
 	}
 
-	public void StopAudio() {
-		StopCoroutine(routine);
+	public void SetCharacter(DialogueCharacter character) {
+		this.character = character;
 	}
 
-	IEnumerator PlayAudioRoutine() {
-		while (true) {
-			PlayClip();
-			yield return new WaitForSeconds(waitTime);
+	public void PlayClip() {
+		if (timesPlayed == 0) {
+			audioSource.Play();
+			audioSource.time = 0;
+			audioSource.pitch = character.pitch + Random.Range(-0.1f, 0.1f);
 		}
-	}
-
-	void PlayClip() {
-		int randomIndex = Random.Range(0, clips.Count);
-		AudioClip selectedClip = clips[randomIndex];
-		AudioSource.PlayClipAtPoint(selectedClip, playTarget.position);
-		if (lastPlayed != null)
-			clips.Add(lastPlayed);
-		lastPlayed = selectedClip;
-		clips.Remove(selectedClip);
+		timesPlayed++;
+		timesPlayed %= skipped;
 	}
 }
