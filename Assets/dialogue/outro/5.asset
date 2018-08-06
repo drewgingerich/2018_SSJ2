@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: 5
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: 7f130f7dd0e164125855ea22a6c90755, type: 2}
-  text: I don't know if I want to kill the legend, though.
-  textSpeed: 0.035
-  finishPauseTime: 2
+  text: Except...
+  textSpeed: 0.03
+  finishPauseTime: 1

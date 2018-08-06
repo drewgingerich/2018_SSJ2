@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9ba1cda2127f493392ce3827487e55a, type: 3}
-  m_Name: 4
+  m_Name: 6
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: 7f130f7dd0e164125855ea22a6c90755, type: 2}
-  text: '...'
+  text: I don't know if I want to kill the legend.
   textSpeed: 0.03
-  finishPauseTime: 1
+  finishPauseTime: 2
