@@ -20,10 +20,11 @@ public class AudioFadeIn : MonoBehaviour {
 	public IEnumerator FadeIn() {
 		float inverseFadeTime = 1 / fadeTime;
 		float progress = 0;
+		float targetVolume = audioSource.volume;
 		audioSource.volume = 0;
-		while (audioSource.volume < 1) {
+		while (audioSource.volume < targetVolume) {
 			progress += Time.deltaTime * inverseFadeTime;
-			audioSource.volume = Mathf.Lerp(0, 1, progress);
+			audioSource.volume = Mathf.Lerp(0, targetVolume, progress);
 			yield return null;
 		}
 		OnFinish.Invoke();
