@@ -7,5 +7,5 @@ public class DialogueCharacter : ScriptableObject {
 
 	public new string name;
 	public Color color;
-	[Range(.7f, 1.2f)] public float pitch = 1;
+	public float pitch = 1;
 }
