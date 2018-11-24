@@ -33,7 +33,7 @@ public class ItemDisplay : MonoBehaviour {
 		OnStart.Invoke();
 		bool itemTextIsPresent = item.text != null;
 		itemTextBox.text = itemTextIsPresent ? item.text.text : "";
-		yield return StartCoroutine((thoughtTypewriter.TypeDialogueRoutine(item.thoughts, spaceBetweenLines:0)));
+		yield return StartCoroutine(thoughtTypewriter.TypeDialogueRoutine(item.thoughts));
 		nextButton.SetActive(true);
 		while (!CheckForInterrupt()) {
 			yield return null;

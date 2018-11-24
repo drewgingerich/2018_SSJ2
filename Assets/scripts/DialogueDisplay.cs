@@ -16,7 +16,7 @@ public class DialogueDisplay : MonoBehaviour {
 		StartCoroutine(DisplayDialogueRoutine(dialogue, callback));
 	}
 
-	IEnumerator DisplayDialogueRoutine(Dialogue dialogue, System.Action callback) {
+	private IEnumerator DisplayDialogueRoutine(Dialogue dialogue, System.Action callback) {
 		OnStart.Invoke();
 		yield return StartCoroutine(typewriter.TypeDialogueRoutine(dialogue));
 		callback();

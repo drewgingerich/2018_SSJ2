@@ -7,8 +7,10 @@ public class DialoguePlayer : MonoBehaviour {
 
 	public UnityEvent OnFinish;
 
-	[SerializeField] DialogueDisplay display;
-	[SerializeField] Dialogue dialogue;
+	[SerializeField]
+	private DialogueDisplay display;
+	[SerializeField]
+	private Dialogue dialogue;
 
 	public void Activate() {
 		display.DisplayDialogue(dialogue, Finish);
