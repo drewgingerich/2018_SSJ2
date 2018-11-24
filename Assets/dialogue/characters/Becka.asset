@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: Becka
   m_EditorClassIdentifier: 
   name: Becka
-  color: {r: 0, g: 0.7058824, b: 1, a: 0}
+  color: {r: 0, g: 0.7058824, b: 1, a: 1}
   pitch: 1.1

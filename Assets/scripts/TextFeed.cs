@@ -11,11 +11,8 @@ public class TextFeed {
 	private const string hideTags = "<color=#00000000></color>";
 	private const string colorTagsTemplate = "<color=#{0}></color>";
 
-	private readonly int fullTagsLength = hideTags.Length;
 	private readonly int openingTagLength = "<color=#00000000>".Length;
 	private readonly int closingTagLength = "</color>".Length;
-
-	private DialogueLine line;
 
 	private string lineText;
 
@@ -25,12 +22,13 @@ public class TextFeed {
 	private int hiddenTextIndex;
 	private int characterIndex;
 
-
 	public TextFeed() {
 		sb = new StringBuilder(64);
 	}
 
 	public void LoadLine(DialogueLine line) {
+		lineText = line.text;
+
 		if (clearLines) {
 			Clear();
 		}
