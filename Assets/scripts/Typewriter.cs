@@ -11,6 +11,8 @@ public class Typewriter : MonoBehaviour {
 	[SerializeField]
 	private Text textBox;
 	[SerializeField]
+	private BlinkingGraphic lineFinishedIndicator;
+	[SerializeField]
 	private bool clearLines = false;
 	[SerializeField]
 	private bool clearOnFinish = false;
@@ -51,7 +53,6 @@ public class Typewriter : MonoBehaviour {
 			DialogueLine line = dialogue.Lines[i];
 			yield return StartCoroutine(TypeLineRoutine(line));
 			yield return StartCoroutine(WaitForInterrupt());
-			// yield return StartCoroutine(PauseAfterLine(line.finishPauseTime));
 			if (i < dialogue.Lines.Count - 1) {
 				textFeed.AddLineBreak();
 			}
@@ -82,6 +83,7 @@ public class Typewriter : MonoBehaviour {
 	}
 
 	private IEnumerator WaitForInterrupt() {
+		lineFinishedIndicator.StartBlinking();
 		while (true) {
 			if (interrupt) {
 				interrupt = false;
@@ -89,6 +91,7 @@ public class Typewriter : MonoBehaviour {
 			}
 			yield return null;
 		}
+		lineFinishedIndicator.StopBlinking();
 	}
 
 	private IEnumerator PauseAfterLine(float pauseTime) {
