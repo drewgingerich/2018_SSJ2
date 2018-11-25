@@ -17,7 +17,7 @@ public class Typewriter : MonoBehaviour {
 	[SerializeField]
 	private bool clearOnFinish = false;
 
-	private const float textSpeed = 1f;
+	private const float textSpeed = 1.5f;
 
 	private TextFeed textFeed;
 
@@ -84,6 +84,7 @@ public class Typewriter : MonoBehaviour {
 
 	private IEnumerator WaitForInterrupt() {
 		lineFinishedIndicator.StartBlinking();
+		yield return new WaitForSeconds(0.5f);
 		while (true) {
 			if (interrupt) {
 				interrupt = false;
