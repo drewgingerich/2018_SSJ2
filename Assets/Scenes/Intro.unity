@@ -120,16 +120,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1551053938}
     m_Modifications:
-    - target: {fileID: 114008938602714728, guid: 5064d52687432409ba06ef4b56639967,
-        type: 2}
-      propertyPath: OnLoadLine.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114008938602714728, guid: 5064d52687432409ba06ef4b56639967,
-        type: 2}
-      propertyPath: OnTypeCharacter.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 224021878895418606, guid: 5064d52687432409ba06ef4b56639967,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -220,66 +210,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114185814481800726, guid: 5064d52687432409ba06ef4b56639967,
-        type: 2}
-      propertyPath: m_FontData.m_FontSize
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 114008938602714728, guid: 5064d52687432409ba06ef4b56639967,
-        type: 2}
-      propertyPath: OnTypeCharacter.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114008938602714728, guid: 5064d52687432409ba06ef4b56639967,
-        type: 2}
-      propertyPath: OnTypeCharacter.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114008938602714728, guid: 5064d52687432409ba06ef4b56639967,
-        type: 2}
-      propertyPath: OnTypeCharacter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 850594106}
-    - target: {fileID: 114008938602714728, guid: 5064d52687432409ba06ef4b56639967,
-        type: 2}
-      propertyPath: OnTypeCharacter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlayClipNthTime
-      objectReference: {fileID: 0}
-    - target: {fileID: 114008938602714728, guid: 5064d52687432409ba06ef4b56639967,
-        type: 2}
-      propertyPath: OnTypeCharacter.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 114008938602714728, guid: 5064d52687432409ba06ef4b56639967,
-        type: 2}
-      propertyPath: OnLoadLine.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114008938602714728, guid: 5064d52687432409ba06ef4b56639967,
-        type: 2}
-      propertyPath: OnLoadLine.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114008938602714728, guid: 5064d52687432409ba06ef4b56639967,
-        type: 2}
-      propertyPath: OnLoadLine.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 850594106}
-    - target: {fileID: 114008938602714728, guid: 5064d52687432409ba06ef4b56639967,
-        type: 2}
-      propertyPath: OnLoadLine.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetDialogueLine
-      objectReference: {fileID: 0}
-    - target: {fileID: 114008938602714728, guid: 5064d52687432409ba06ef4b56639967,
-        type: 2}
-      propertyPath: OnLoadLine.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: DialogueLine, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 114008938602714728, guid: 5064d52687432409ba06ef4b56639967,
-        type: 2}
-      propertyPath: audio
-      value: 
-      objectReference: {fileID: 850594106}
     - target: {fileID: 114008938602714728, guid: 5064d52687432409ba06ef4b56639967,
         type: 2}
       propertyPath: typewriterAudio
@@ -430,7 +360,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1259921565}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &297109864
 MonoBehaviour:
@@ -471,7 +401,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1259921565}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &328692923
 MonoBehaviour:
@@ -520,6 +450,62 @@ MonoBehaviour:
   recursive: 1
   fold: 1
   bindingTypeName: []
+--- !u!1 &836563286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 836563287}
+  - component: {fileID: 836563288}
+  m_Layer: 0
+  m_Name: Start
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &836563287
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 836563286}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1259921565}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &836563288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 836563286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebd9aebb1106c4f4f998c819e117f5ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 328692923}
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &850594105
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,7 +749,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1259921565}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1240774611
 MonoBehaviour:
@@ -824,6 +810,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 836563287}
   - {fileID: 328692922}
   - {fileID: 1240774610}
   - {fileID: 297109863}
