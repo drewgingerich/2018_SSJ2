@@ -553,8 +553,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typewriterAudio: {fileID: 0}
   textBox: {fileID: 114287132825731146}
+  lineFinishedIndicator: {fileID: 0}
   clearLines: 0
   clearOnFinish: 0
+  lineBreakSize: 1
 --- !u!114 &114906216463814752
 MonoBehaviour:
   m_ObjectHideFlags: 1

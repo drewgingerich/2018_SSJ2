@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Name: Description4
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: 7f130f7dd0e164125855ea22a6c90755, type: 2}
-  text: '
-
-    Aaaand they left one!'
+  text: Aaaand they left one!
   textSpeed: 0.02
-  finishPauseTime: 0.2
+  waitForInput: 0
+  finishPauseTime: 0

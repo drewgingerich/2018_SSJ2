@@ -15813,6 +15813,11 @@ Prefab:
       propertyPath: OnEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2036183723}
+    - target: {fileID: 114658477799401392, guid: 6345bde16634c49c0bf3978afaa9e09c,
+        type: 2}
+      propertyPath: lineBreakSize
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6345bde16634c49c0bf3978afaa9e09c, type: 2}
   m_IsPrefabAsset: 0

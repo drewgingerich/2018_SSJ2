@@ -5,9 +5,6 @@ using UnityEngine;
 
 public class TextFeed {
 
-	public int lineBreakSize;
-	public bool clearLines;
-
 	private const string hideTags = "<color=#00000000></color>";
 	private const string colorTagsTemplate = "<color=#{0}></color>";
 
@@ -29,10 +26,6 @@ public class TextFeed {
 	public void LoadLine(DialogueLine line) {
 		lineText = line.text;
 
-		if (clearLines) {
-			Clear();
-		}
-
 		visibleTextIndex = sb.Length + openingTagLength;
 		hiddenTextIndex = sb.Length + openingTagLength * 2 + closingTagLength;
 		characterIndex = 0;
@@ -44,7 +37,7 @@ public class TextFeed {
 	}
 
 	public bool ShowNextChar(out string newText) {
-		if (characterIndex + 1 < lineText.Length) {
+		if (characterIndex + 1 <= lineText.Length) {
 			RevealChars(1);
 			newText = sb.ToString();
 			return true;
@@ -59,8 +52,10 @@ public class TextFeed {
 		return sb.ToString();
 	}
 
-	public void AddLineBreak() {
-		sb.Append('\n' * lineBreakSize);
+	public void AddLineBreak(int size) {
+		for (int i = 0; i < size; i++) {
+			sb.Append('\n');
+		}
 	}
 
 	public void Clear() {

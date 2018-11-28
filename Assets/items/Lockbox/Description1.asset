@@ -14,4 +14,5 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: 7f130f7dd0e164125855ea22a6c90755, type: 2}
   text: Aaaand the key fits!
   textSpeed: 0.02
+  waitForInput: 0
   finishPauseTime: 1

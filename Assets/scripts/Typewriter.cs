@@ -16,6 +16,8 @@ public class Typewriter : MonoBehaviour {
 	private bool clearLines = false;
 	[SerializeField]
 	private bool clearOnFinish = false;
+	[SerializeField]
+	private int lineBreakSize = 2;
 
 	private const float textSpeed = 1.5f;
 
@@ -36,8 +38,6 @@ public class Typewriter : MonoBehaviour {
 
 	private void Awake() {
 		textFeed = new TextFeed();
-		textFeed.clearLines = clearLines;
-		textFeed.lineBreakSize = 2;
 	}
 
 	private void Update() {
@@ -52,9 +52,13 @@ public class Typewriter : MonoBehaviour {
 		for (int i = 0; i < dialogue.Lines.Count; i++) {
 			DialogueLine line = dialogue.Lines[i];
 			yield return StartCoroutine(TypeLineRoutine(line));
-			yield return StartCoroutine(WaitForInterrupt());
+			if (line.waitForInput) {
+				yield return StartCoroutine(WaitForInterrupt());
+			} else {
+				yield return StartCoroutine(PauseAfterLine(line.finishPauseTime));
+			}
 			if (i < dialogue.Lines.Count - 1) {
-				textFeed.AddLineBreak();
+				textFeed.AddLineBreak(lineBreakSize);
 			}
 		}
 		if (clearOnFinish) {
@@ -66,9 +70,13 @@ public class Typewriter : MonoBehaviour {
 	private IEnumerator TypeLineRoutine(DialogueLine line) {
 		typewriterAudio.SetCharacter(line.character);
 
-		textFeed.LoadLine(line);
-		string displayText;
+		if (clearLines) {
+			textFeed.Clear();
+		}
 
+		textFeed.LoadLine(line);
+
+		string displayText;
 		while (textFeed.ShowNextChar(out displayText)) {
 			if (interrupt) {
 				interrupt = false;

@@ -15,4 +15,5 @@ MonoBehaviour:
   text: A diary. The name Jonathan Boyer is scrawled on the inside cover. One of the
     pages is bookmarked.
   textSpeed: 0.02
-  finishPauseTime: 0.2
+  waitForInput: 0
+  finishPauseTime: 0
