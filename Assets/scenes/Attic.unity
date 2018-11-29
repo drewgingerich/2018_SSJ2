@@ -15933,33 +15933,7 @@ Prefab:
       propertyPath: OnEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2036183723}
-    - target: {fileID: 114535357618188074, guid: 9134eac9c524746baabeb6f3ee7f3903,
-        type: 2}
-      propertyPath: hideTime
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114673390342867024, guid: 9134eac9c524746baabeb6f3ee7f3903,
-        type: 2}
-      propertyPath: m_Texture
-      value: 
-      objectReference: {fileID: 10914, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 224503355884897254, guid: 9134eac9c524746baabeb6f3ee7f3903,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 224503355884897254, guid: 9134eac9c524746baabeb6f3ee7f3903,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 114535357618188074, guid: 9134eac9c524746baabeb6f3ee7f3903,
-        type: 2}
-      propertyPath: graphic
-      value: 
-      objectReference: {fileID: 1798440196}
-    m_RemovedComponents:
-    - {fileID: 114673390342867024, guid: 9134eac9c524746baabeb6f3ee7f3903, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9134eac9c524746baabeb6f3ee7f3903, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1180292084
@@ -16938,44 +16912,6 @@ MonoBehaviour:
     m_TypeName: InteractableEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   active: 1
---- !u!1 &1798440193 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1927711209382388, guid: 9134eac9c524746baabeb6f3ee7f3903,
-    type: 2}
-  m_PrefabInternal: {fileID: 1141155631}
---- !u!114 &1798440196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1798440193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 1
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 1
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: '[Enter]'
 --- !u!1 &1802154970
 GameObject:
   m_ObjectHideFlags: 0
@@ -17355,7 +17291,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1.03
   Loop: 0
   Mute: 0

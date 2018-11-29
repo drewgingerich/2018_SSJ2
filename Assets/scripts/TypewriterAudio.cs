@@ -18,7 +18,7 @@ public class TypewriterAudio : MonoBehaviour {
 
 	void Start() {
 		audioSource.clip = clip;
-		audioSource.volume = 0.5f;
+		audioSource.volume = 0.2f;
 	}
 
 	public void SetCharacter(DialogueCharacter character) {

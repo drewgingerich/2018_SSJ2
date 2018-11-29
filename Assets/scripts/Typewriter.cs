@@ -19,7 +19,7 @@ public class Typewriter : MonoBehaviour {
 	[SerializeField]
 	private int lineBreakSize = 2;
 
-	private const float textSpeed = 1.5f;
+	private const float textSpeed = 1f;
 
 	private TextFeed textFeed;
 
@@ -41,7 +41,7 @@ public class Typewriter : MonoBehaviour {
 	}
 
 	private void Update() {
-		if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)) {
+		if (Input.GetKeyDown(KeyCode.Return)) {
 			Interrupt();
 		}
 	}

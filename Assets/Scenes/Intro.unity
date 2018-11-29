@@ -215,6 +215,16 @@ Prefab:
       propertyPath: typewriterAudio
       value: 
       objectReference: {fileID: 850594106}
+    - target: {fileID: 114237808006052162, guid: 5064d52687432409ba06ef4b56639967,
+        type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114237808006052162, guid: 5064d52687432409ba06ef4b56639967,
+        type: 2}
+      propertyPath: m_Text
+      value: Next
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5064d52687432409ba06ef4b56639967, type: 2}
   m_IsPrefabAsset: 0
